@@ -83,14 +83,14 @@ def main():
     load_dotenv(env_file)
     
     openai_key = os.getenv("OPENAI_API_KEY")
-    hf_token = os.getenv("HUGGINGFACE_HUB_TOKEN")
+    hf_token = os.getenv("HF_TOKEN")
     
     if not openai_key:
         print("⚠️  Missing OPENAI_API_KEY in .env file")
         print("   Get one from: https://platform.openai.com/api-keys")
         
     if not hf_token:
-        print("⚠️  Missing HUGGINGFACE_HUB_TOKEN in .env file")
+        print("⚠️  Missing HF_TOKEN in .env file")
         print("   Get one from: https://huggingface.co/settings/tokens")
     
     if not openai_key or not hf_token:
