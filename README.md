@@ -158,14 +158,6 @@ streamlit run app.py --server.port 8502
     
 15. **Realistic Responses**: The persona is instructed to respond in character, drawing from their detailed background. They are also instructed to be realistic, but of course take it with a grain of salt. 
 
-### Phase 5: Advanced Usage 🚀
-
-16. **Create Multiple Personas**: Build a library for different research needs:
-    - Different stakeholders
-    - Various industries 
-17. **A/B Testing**: Compare how different personas respond to the same questions
-18. **Market Research**: Use personas to test product ideas, marketing messages, or user experiences
-19. **Iterative Improvement**: If you want to make fine-grained improvements / changes to personas, you can directly modify them in /frontend/personas and add/delete the text. You can also copy that back into the persona generator if you want to use that as a beginning for new personas.
 
 ## 🎯 Example Complete Workflow
 
