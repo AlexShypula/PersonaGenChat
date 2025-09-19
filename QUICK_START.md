@@ -31,9 +31,9 @@ HUGGINGFACE_HUB_TOKEN=your_hf_token_here
 #### 🖱️ **Easiest: Double-Click Method**
 - **Windows**: Double-click `start_personas.bat`
 - **Mac**: 
-  - **Option 1**: Double-click `start_personas.command` (opens Terminal)
-  - **Option 2**: Run `python create_mac_app.py` then double-click "Persona System.app"
-  - **Option 3**: Double-click `start_personas.py` (if Python is set as default)
+  - **Option 1**: Run `python create_mac_app.py` then double-click "Persona System.app"
+  - **Option 2**: Double-click `start_personas.py` (if Python is set as default)
+  - **Option 3**: Open Terminal and run `bash start_personas.sh`
 - **Linux**: Double-click `start_personas.sh`
 - **Any OS**: Run `python start_personas.py`
 
