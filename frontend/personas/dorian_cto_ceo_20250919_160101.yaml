@@ -1,0 +1,65 @@
+arts_persona: "He appreciates minimalist design and technical photography; he collects\
+  \ prints from modern photographers who capture urban decay and industrial landscapes\u2014\
+  an aesthetic that echoes his interest in the layered complexity of systems."
+career_goals_and_ambitions: "Over the next 3\u20135 years Dorian wants to scale his\
+  \ firm to a reputable boutique with predictable revenue streams\u2014productizing\
+  \ research into repeatable services or tooling, expanding a managed reverse engineering\
+  \ offering, and building a recognized research brand that attracts acquisitions\
+  \ or strategic partnerships. He aims to maintain technical credibility while delegating\
+  \ day\u2011to\u2011day engineering to senior leads so he can focus on growth and\
+  \ high\u2011value research engagements and partnerships with tool vendors and academic\
+  \ labs for recruiting and R&D collaborations. He also wants to establish an internal\
+  \ training academy to staff talent faster and reduce dependency on expensive external\
+  \ hires or contractors for high\u2011end analysis work.\n\nSex: Male\nAge: 42\n\
+  Marital_status: married_present\nEducation_level: masters\nBachelors_field: computer_science\n\
+  Occupation: cto_or_ceo\nCity: Austin\nState: TX\nZipcode: 78701\nCountry: USA"
+culinary_persona: "A fan of straightforward, well\u2011executed food: craft coffee,\
+  \ smoked meats, and small plates. He enjoys trying regional barbecue and favors\
+  \ local artisan breweries when socializing with clients or team members."
+hobbies_and_interests: "He participates in CTFs (both as competitor and sponsor),\
+  \ mentors junior analysts, contributes to open\u2011source tooling occasionally,\
+  \ and builds small hardware projects (IoT device teardown). He reads technical blogs,\
+  \ follows vulnerability disclosures, and enjoys tinkering with vintage electronics\
+  \ in his garage."
+hobbies_and_interests_list:
+- capture the flag competitions (offense/reverse categories)
+- hardware teardown and IoT tinkering
+- technical blogging and conference speaking
+- mentoring and running internal trainings
+- trail running and gravel cycling
+persona: "Dorian Hale, a pragmatic technical leader who balances hands\u2011on reverse\
+  \ engineering with business strategy, prioritizing best\u2011in\u2011class tooling\
+  \ and trusted experts to deliver high\u2011value malware and vulnerability analysis\
+  \ for midmarket clients."
+professional_persona: "As founder and CTO/CEO of a boutique cybersecurity consultancy\
+  \ (20\u201340 employees), Dorian leads both the technical practice and the go\u2011\
+  to\u2011market strategy. He started as a malware analyst and carved the company\u2019\
+  s niche in deep binary analysis, incident response, and bespoke firmware/reverse\
+  \ engineering projects for clients in fintech and industrial control systems. He\
+  \ signs annual enterprise tool licenses (IDA Pro/Hex\u2011Rays, commercial debuggers,\
+  \ sandboxing) and budgets for specialist training and conference presence. He values\
+  \ reliability, vendor responsiveness, and clear ROI from tooling and services."
+skills_and_expertise: "Dorian is an expert in static and dynamic binary analysis,\
+  \ exploit development, firmware reverse engineering, and incident response. He combines\
+  \ deep technical skills (assembly, C/C++, binary formats) with productized process\
+  \ building\u2014runbooks, triage workflows, and repeatable engagement models. He\
+  \ makes procurement decisions based on technical fit, support, and analyst productivity\
+  \ gains."
+skills_and_expertise_list:
+- reverse engineering (x86/x64/ARM/MIPS)
+- malware analysis and incident response
+- exploit development and vulnerability research
+- firmware and embedded systems analysis
+- "IDA Pro and Hex\u2011Rays decompiler"
+- Ghidra, Binary Ninja, radare2, x64dbg
+- debuggers, emulators (QEMU), dynamic instrumentation (Frida, PIN)
+- scripting (Python, Bash), automation of pipelines
+- threat hunting and C2 analysis
+- team leadership, client engagement, productizing services
+sports_persona: "Dorian enjoys trail running and weekend gravel rides to clear his\
+  \ head after long reverse\u2011engineering sprints. He follows Formula 1 and occasionally\
+  \ plays pickup soccer with former college teammates."
+travel_persona: "Business travel is frequent: he attends Black Hat, RSA, REcon, and\
+  \ local CTFs in the US and EU. For personal travel he prefers active, tech\u2011\
+  adjacent trips\u2014visiting Hackathons, attending small research meetups, or exploring\
+  \ tech museums and historic industrial sites."
