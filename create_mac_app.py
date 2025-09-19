@@ -77,19 +77,18 @@ if [ ! -f ".env" ]; then
         OPENAI_KEY=$(osascript -e 'display dialog "Enter your OpenAI API key (from https://platform.openai.com/api-keys):" default answer "" with hidden answer' -e 'text returned of result' 2>/dev/null)
         HF_TOKEN=$(osascript -e 'display dialog "Enter your Hugging Face token (from https://huggingface.co/settings/tokens):" default answer "" with hidden answer' -e 'text returned of result' 2>/dev/null)
         
-        {
-            if [ ! -z "$OPENAI_KEY" ]; then
-                echo "OPENAI_API_KEY=$OPENAI_KEY"
-            else
-                echo "# OPENAI_API_KEY=your_openai_key_here"
-            fi
-            
-            if [ ! -z "$HF_TOKEN" ]; then
-                echo "HUGGINGFACE_HUB_TOKEN=$HF_TOKEN"
-            else
-                echo "# HUGGINGFACE_HUB_TOKEN=your_hf_token_here"
-            fi
-        } > .env
+        # Create .env file
+        if [ ! -z "$OPENAI_KEY" ]; then
+            echo "OPENAI_API_KEY=$OPENAI_KEY" > .env
+        else
+            echo "# OPENAI_API_KEY=your_openai_key_here" > .env
+        fi
+        
+        if [ ! -z "$HF_TOKEN" ]; then
+            echo "HUGGINGFACE_HUB_TOKEN=$HF_TOKEN" >> .env
+        else
+            echo "# HUGGINGFACE_HUB_TOKEN=your_hf_token_here" >> .env
+        fi
         
         osascript -e 'display notification "API keys saved!" with title "Persona System"'
     else
