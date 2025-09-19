@@ -2,6 +2,27 @@
 
 Create a persona in the format of [Nemotron Personas](https://huggingface.co/datasets/nvidia/Nemotron-Personas) with ChatGPT, modify it / iterate on it, save it, and chat with it.
 
+## 🖼️ What It Looks Like
+
+### Main Interface
+Clean, intuitive navigation between persona generation and chat features.
+
+<img src="images/main_page.png" width="600" alt="Main Interface">
+
+### 🧠 Persona Generator
+Create detailed personas using natural language prompts, then iterate and refine them.
+
+<img src="images/persona_generator.png" width="600" alt="Persona Generator">
+
+### 💬 Persona Chat
+Have realistic conversations with your saved personas for market research and testing.
+
+<img src="images/persona_chat.png" width="600" alt="Persona Chat">
+
+---
+
+## 🚀 Quick Setup
+
 ### Step 1: Get Your API Keys
 
 #### OpenAI API Key
