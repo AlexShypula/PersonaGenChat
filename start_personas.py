@@ -28,24 +28,75 @@ def main():
     env_file = script_dir / ".env"
     if not env_file.exists():
         print("⚠️  No .env file found!")
-        print("You need to create a .env file with your OpenAI API key:")
-        print("OPENAI_API_KEY=your_key_here")
+        print("You need to create a .env file with your API keys:")
+        print("OPENAI_API_KEY=your_openai_key_here")
+        print("HUGGINGFACE_HUB_TOKEN=your_hf_token_here")
         print()
-        create_env = input("Would you like me to help you create one? (y/n): ").lower().strip()
+        print("🔑 You'll need tokens from:")
+        print("   • OpenAI: https://platform.openai.com/api-keys")
+        print("   • Hugging Face: https://huggingface.co/settings/tokens")
+        print()
+        
+        create_env = input("Would you like me to help you create the .env file? (y/n): ").lower().strip()
         if create_env == 'y':
-            api_key = input("Enter your OpenAI API key: ").strip()
-            if api_key:
-                with open(env_file, 'w') as f:
-                    f.write(f"OPENAI_API_KEY={api_key}\n")
-                print("✅ .env file created!")
+            print("\n🔑 Let's set up your API keys...")
+            print("(You can press Enter to skip any key and add it manually later)")
+            print()
+            
+            # Get OpenAI API key
+            openai_key = input("📝 Enter your OpenAI API key (starts with sk-): ").strip()
+            
+            # Get Hugging Face token
+            print("\n💡 For Hugging Face token:")
+            print("   1. Go to https://huggingface.co/settings/tokens")
+            print("   2. Click 'New token'")
+            print("   3. Choose 'Read' permission")
+            print("   4. Copy the token (starts with hf_)")
+            hf_token = input("📝 Enter your Hugging Face token (starts with hf_): ").strip()
+            
+            # Create .env file
+            with open(env_file, 'w') as f:
+                if openai_key:
+                    f.write(f"OPENAI_API_KEY={openai_key}\n")
+                else:
+                    f.write("# OPENAI_API_KEY=your_openai_key_here\n")
+                
+                if hf_token:
+                    f.write(f"HUGGINGFACE_HUB_TOKEN={hf_token}\n")
+                else:
+                    f.write("# HUGGINGFACE_HUB_TOKEN=your_hf_token_here\n")
+            
+            if openai_key and hf_token:
+                print("✅ .env file created with both tokens!")
+            elif openai_key or hf_token:
+                print("✅ .env file created! Please add the missing tokens manually.")
             else:
-                print("❌ No API key provided. Exiting...")
-                input("Press Enter to exit...")
-                return
+                print("✅ .env template created! Please add your tokens manually.")
         else:
-            print("Please create a .env file manually and try again.")
+            print("Please create a .env file manually with your API keys.")
             input("Press Enter to exit...")
             return
+    
+    # Check if we have the required tokens
+    import os
+    from dotenv import load_dotenv
+    load_dotenv(env_file)
+    
+    openai_key = os.getenv("OPENAI_API_KEY")
+    hf_token = os.getenv("HUGGINGFACE_HUB_TOKEN")
+    
+    if not openai_key:
+        print("⚠️  Missing OPENAI_API_KEY in .env file")
+        print("   Get one from: https://platform.openai.com/api-keys")
+        
+    if not hf_token:
+        print("⚠️  Missing HUGGINGFACE_HUB_TOKEN in .env file")
+        print("   Get one from: https://huggingface.co/settings/tokens")
+    
+    if not openai_key or not hf_token:
+        print("\n❌ Missing required API keys. Please update your .env file.")
+        input("Press Enter to exit...")
+        return
     
     # Change to frontend directory
     os.chdir(frontend_dir)
